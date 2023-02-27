@@ -1,0 +1,16 @@
+
+<table>
+    <tr>
+        <th> Id  </th>
+        <th> Name </th>
+        <th> Editer </th>
+    </tr>
+{% for l in list %}
+<tr>
+    <td> {{ l.id }} </td>
+    <td> {{ l.name }} </td>
+    <td><a href="{{ path('delete',{'id':l.id}) }}">Supprimer</a>
+    <a href="{{ path('edit',{'id':l.id}) }}">Modifier</a></td>
+</tr>
+{% endfor %}
+</table>
